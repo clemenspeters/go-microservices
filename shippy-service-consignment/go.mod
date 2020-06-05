@@ -1,4 +1,4 @@
-module github.com/clemenspeters/go-mircorservices/tree/master/shippy-service-consignment/proto/consignment
+module github.com/clemenspeters/go-mircorservices/tree/master/shippy-service-consignment
 
 go 1.14
 
