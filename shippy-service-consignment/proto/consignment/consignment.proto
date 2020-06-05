@@ -22,6 +22,8 @@ message Container {
     string user_id = 4;
 }
 
+message GetRequest {}
+
 message Response {
     bool created = 1;
     Consignment consignment = 2;
