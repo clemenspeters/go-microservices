@@ -1,7 +1,6 @@
 package main
 
 import (
-	"context"
 	"fmt"
 
 	// Import the generated protobuf code
@@ -9,10 +8,6 @@ import (
 
 	pb "github.com/clemenspeters/go-mircorservices/tree/master/shippy-service-consignment/proto/consignment"
 	"github.com/micro/go-micro"
-)
-
-const (
-	port = ":50051"
 )
 
 type repository interface {
@@ -65,12 +60,6 @@ func (s *service) CreateConsignment(ctx context.Context, req *pb.Consignment, re
 }
 
 // GetConsignments -
-func (s *service) GetConsignments(ctx context.Context, req *pb.GetRequest, res *pb.Response) error {
-	consignments := s.repo.GetAll()
-	res.Consignments = consignments
-	return nil
-}
-
 func (s *service) GetConsignments(ctx context.Context, req *pb.GetRequest, res *pb.Response) error {
 	consignments := s.repo.GetAll()
 	res.Consignments = consignments
