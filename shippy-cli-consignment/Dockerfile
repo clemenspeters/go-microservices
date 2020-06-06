@@ -6,6 +6,8 @@ RUN apk update && apk upgrade && \
 RUN mkdir /app
 WORKDIR /app
 
+ENV GO111MODULE=on
+
 COPY . .
 
 RUN go get

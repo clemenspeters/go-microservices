@@ -8,7 +8,7 @@ import (
 
 	"context"
 
-	pb "github.com/EwanValentine/shippy-service-consignment/proto/consignment"
+	pb "github.com/clemenspeters/go-mircorservices/shippy-service-consignment/proto/consignment"
 
 	micro "github.com/micro/go-micro"
 )
@@ -32,7 +32,7 @@ func main() {
 	service := micro.NewService(micro.Name("shippy.cli.consignment"))
 	service.Init()
 
-	client := pb.NewShippingServiceClient("shippy.service.consignment", service.Client())
+	client := pb.NewShippingService("shippy.service.consignment", service.Client())
 
 	// Contact the server and print out its response.
 	file := defaultFilename
